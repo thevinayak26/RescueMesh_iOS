@@ -3924,9 +3924,21 @@ extension ChatViewModel {
     
     private func broadcastEmergencyPayload(_ payload: String) {
         // Broadcast the high-priority payload string over the mesh
-        // This takes advantage of the priority bump added in BLEService
         print("Broadcasting high-priority Emergency Payload: \(payload)")
         self.sendMessage(payload)
+        
+        // Activate battery-aware pulse boost (10x rate if battery < 20%)
+        BatteryEmergencyManager.shared.activateEmergencyMode(payload: payload)
+        
+        // Listen for retransmit pulses from BatteryEmergencyManager
+        NotificationCenter.default.addObserver(
+            forName: NSNotification.Name("BatteryManagerSOSRetransmit"),
+            object: nil, queue: .main
+        ) { [weak self] note in
+            if let retransmitPayload = note.userInfo?["payload"] as? String {
+                self?.sendMessage(retransmitPayload)
+            }
+        }
     }
     
     private func checkForSOS(_ message: BitchatMessage) {
