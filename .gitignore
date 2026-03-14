@@ -1,0 +1,39 @@
+# Dependencies — installed locally, never uploaded
+node_modules/
+.npm
+
+# Environment files — contain passwords and secrets, keep them private!
+.env
+.env.local
+.env.*.local
+
+# Build output — generated automatically, no need to upload
+dist/
+build/
+out/
+.next/
+
+# Editor settings — personal to each developer
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# macOS junk files — invisible on Mac but useless to Windows teammates
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows junk files — same idea, other direction
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Logs and temp files
+*.log
+npm-debug.log*
+.cache/
+tmp/
+temp/
