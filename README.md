@@ -2,7 +2,7 @@
 
 > **When there's no signal, there's still RescueMesh.**
 
-RescueMesh is an iOS emergency SOS system that works **without cellular, WiFi, or internet**. It uses **Bluetooth Low Energy mesh networking** to broadcast crash alerts, GPS location, medical info, and emergency contacts to nearby devices — even in dead zones.
+RescueMesh is an iOS emergency SOS system that works **without cellular, WiFi, or internet**. It uses **Bluetooth Low Energy mesh networking** to broadcast crash alerts, GPS location, medical info, and emergency contacts to nearby devices — even in dead zones. It acts as boon specially in disaster and war situations.
 
 ---
 
