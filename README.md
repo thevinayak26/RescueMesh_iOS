@@ -1,4 +1,4 @@
-# RescueMesh — Emergency SOS via Bluetooth Mesh
+# RescueMesh — Emergency SOS via bluetooth Mesh
 
 > **When there's no signal, there's still RescueMesh.**
 
